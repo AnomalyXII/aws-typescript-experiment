@@ -1,19 +1,19 @@
 {
   "name": "@anomaly-xii/aws-lambda-experiment",
+  "description": "A test of running TypeScript code in AWS Lambdas",
+  "private": true,
+  "author": "AnomalyXII",
+  "license": "MIT",
   "version": "0.1.0",
   "main": "lib/index.js",
+  "packageManager": "yarn@3.0.2",
   "scripts": {
     "compile": "tsc --build packages/*",
     "clean": "rm -rf packages/*/dist packages/*/tsconfig.tsbuildinfo"
   },
   "devDependencies": {
-    "yarn": "^1.22.17",
-    "typescript": "^4.4.4"
+    "typescript": "4.3.5"
   },
-  "description": "A test of running TypeScript code in AWS Lambdas",
-  "author": "AnomalyXII",
-  "license": "MIT",
-  "private": true,
   "workspaces": [
     "packages/**"
   ]

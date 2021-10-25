@@ -7,9 +7,9 @@
     "start": "node src/index.ts"
   },
   "devDependencies": {
-    "aws-sdk": "^2.1013.0",
     "@types/aws-lambda": "^8.10.84",
-    "@types/node": "^16.11.4"
+    "@types/node": "^16.11.4",
+    "aws-sdk": "^2.1013.0"
   },
   "dependencies": {
     "@anomaly-xii/a": "^0.1.0"

@@ -1,5 +1,9 @@
 .idea/
+.yarn/cache
+.yarn/unplugged
+.yarn/install-state.gz
 dist/
 node_modules/
 *.iml
 *.json~
+*.tsbuildinfo
