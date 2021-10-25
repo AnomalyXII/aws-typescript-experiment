@@ -1,10 +1,12 @@
 {
   "name": "@anomaly-xii/b",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "main": "dist/index",
   "types": "dist/index",
   "scripts": {
-    "start": "node src/index.ts"
+    "compile": "tsc --build tsconfig.json",
+    "test": "",
+    "clean": "rm -rf build tsconfig.tsbuildinfo"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.84",
@@ -12,6 +14,6 @@
     "aws-sdk": "^2.1013.0"
   },
   "dependencies": {
-    "@anomaly-xii/a": "^0.1.0"
+    "@anomaly-xii/a": "^1.0.0"
   }
 }

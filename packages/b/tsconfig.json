@@ -1,10 +1,10 @@
 {
-  "extends": "../../tsconfig.include.json",
+  "extends": "../tsconfig.include.json",
   "compilerOptions": {
-    "rootDir": "./src/",
-    "outDir": "./dist/"
+    "rootDir": "src/",
+    "outDir": "./build"
   },
   "references": [
-    {"path":  "../a"}
+    {"path": "../a"}
   ]
 }
