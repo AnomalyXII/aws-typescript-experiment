@@ -1,0 +1,17 @@
+{
+  "name": "@anomaly-xii/b",
+  "version": "0.1.0",
+  "main": "dist/index",
+  "types": "dist/index",
+  "scripts": {
+    "start": "node src/index.ts"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.1013.0",
+    "@types/aws-lambda": "^8.10.84",
+    "@types/node": "^16.11.4"
+  },
+  "dependencies": {
+    "@anomaly-xii/a": "^0.1.0"
+  }
+}
