@@ -2,7 +2,11 @@
   "files": [],
   "include": [],
   "references": [
-    { "path": "./packages/a" },
-    { "path": "./packages/b" },
+    {
+      "path": "./packages/a"
+    },
+    {
+      "path": "./packages/b"
+    }
   ]
 }

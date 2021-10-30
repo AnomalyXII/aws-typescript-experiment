@@ -1,0 +1,26 @@
+#!/bin/sh
+
+CMD=''
+if command -v aws
+then
+  CMD="aws"
+else
+  REGISTRY="docker.io"
+  IMAGE="amazon/aws-cli"
+  TAG="latest"
+
+  if command -v docker
+  then
+    CMD=$(which docker)
+  elif command -v podman
+  then
+    CMD=$(which podman)
+  else
+    echo 'No valid `aws` command found; please install `docker`, `podman` or the `awscli` package.' >&2
+    exit 1
+  fi
+  CMD="$CMD run --rm -v $(readlink -f ~/.aws):/root/.aws -v $(pwd):/aws -it $REGISTRY/$IMAGE:$TAG"
+fi
+
+echo "Running: $CMD $*"
+$CMD $@

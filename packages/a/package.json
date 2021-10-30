@@ -1,27 +1,27 @@
 {
   "name": "@anomaly-xii/a",
-  "version": "1.0.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
   "devDependencies": {
-    "@types/chai": "4.2.22",
-    "@types/mocha": "9.0.0",
-    "@types/node": "^16.11.4",
-    "chai": "^4.2.0",
-    "jest": "^27.3.1",
-    "ts-jest": "^27.0.7"
+    "@types/chai": "^4.2.0",
+    "@types/jest": "^27.0.0",
+    "@types/node": "^16.11.0",
+    "chai": "^4.3.0",
+    "jest": "^27.3.0",
+    "ts-jest": "^27.0.0",
+    "typescript": "^4.4.0"
   },
   "scripts": {
+    "build": "yarn compile && yarn test",
     "compile": "tsc --build tsconfig.json",
+    "compile:on-the-fly": "tsc -w",
     "test": "jest",
-    "clean": "rm -rf build tsconfig.tsbuildinfo"
+    "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "jest": {
-    "roots": [
-      "test/"
-    ],
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    }
+    "preset": "ts-jest"
   }
 }

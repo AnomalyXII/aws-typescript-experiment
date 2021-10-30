@@ -1,19 +1,37 @@
 {
   "name": "@anomaly-xii/b",
-  "version": "1.0.0",
-  "main": "dist/index",
-  "types": "dist/index",
-  "scripts": {
-    "compile": "tsc --build tsconfig.json",
-    "test": "",
-    "clean": "rm -rf build tsconfig.tsbuildinfo"
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
+  "installConfig": {
+    "hoistingLimits": "workspaces",
+    "selfReferences": false
   },
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.84",
-    "@types/node": "^16.11.4",
-    "aws-sdk": "^2.1013.0"
+    "@types/aws-lambda": "^8.10.0",
+    "@types/chai": "^4.2.0",
+    "@types/jest": "^27.0.0",
+    "@types/node": "^16.11.0",
+    "chai": "^4.3.0",
+    "jest": "^27.3.0",
+    "ts-jest": "^27.0.0",
+    "typescript": "^4.4.0"
+  },
+  "scripts": {
+    "build": "yarn compile && yarn test",
+    "compile": "tsc --build tsconfig.json",
+    "compile:on-the-fly": "tsc -w",
+    "test": "",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
-    "@anomaly-xii/a": "^1.0.0"
+    "@anomaly-xii/a": "workspace:*",
+    "@aws-cdk/core": "1.130.0",
+    "source-map-support": "^0.5.20"
+  },
+  "jest": {
+    "preset": "ts-jest"
   }
 }

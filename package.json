@@ -1,22 +1,26 @@
 {
-  "name": "@anomaly-xii/aws-lambda-experiment",
+  "name": "aws-lambda-experiment",
   "description": "A test of running TypeScript code in AWS Lambdas",
   "private": true,
   "author": "AnomalyXII",
   "license": "MIT",
   "version": "0.1.0",
   "main": "lib/index.js",
-  "packageManager": "yarn@3.0.2",
+  "packageManager": "yarn@3.1.0",
   "devDependencies": {
-    "typescript": "4.3.5"
+    "typescript": "^4.4.0"
   },
   "scripts": {
-    "build": "yarn build:compile && yarn build:test",
-    "build:compile": "yarn workspaces foreach run compile",
-    "build:test": "yarn workspaces foreach run test",
-    "clean": "yarn workspaces foreach run clean"
+    "build": "yarn workspaces foreach -v --from '@anomaly-xii/*' run build",
+    "build:install": "yarn workspaces foreach -v --from '@anomaly-xii/*' install",
+    "build:compile": "yarn workspaces foreach -v run --from '@anomaly-xii/*' compile",
+    "build:compile:on-the-fly": "yarn workspaces foreach -vpi --from '@anomaly-xii/*' run compile:on-the-fly",
+    "build:test": "yarn workspaces foreach -vr --from '@anomaly-xii/*' run test",
+    "clean": "yarn workspaces foreach --from '@anomaly-xii/*' run clean",
+    "cdk": "yarn workspace '@anomaly-xii/deploy' cdk"
   },
   "workspaces": [
-    "packages/**"
+    "packages/**",
+    "deploy"
   ]
 }

@@ -1,9 +1,16 @@
-.idea/
-.yarn/cache
-.yarn/unplugged
+# Node stuff
+.yarn/cache/
+.yarn/unplugged/
 .yarn/install-state.gz
-dist/
 node_modules/
+
+# Build project and other temp files
+.idea/
+dist/
 *.iml
 *.json~
 *.tsbuildinfo
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
