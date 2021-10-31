@@ -10,7 +10,7 @@ test('should create a lambda', () => {
 
     expect(stack)
         .toHaveResource("AWS::Lambda::Function", {
-            "Handler": "hello.handler",
+            "Handler": "src/index.handler",
             "Runtime": "nodejs14.x"
         });
 });

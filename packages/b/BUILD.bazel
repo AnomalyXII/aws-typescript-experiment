@@ -1,0 +1,13 @@
+load("//:build/defs/typescript.bzl", "ts_project")
+
+package(default_visibility = ["//:__subpackages__"])
+
+ts_project(
+    name = "b",
+    org = "anomaly-xii",
+    deps = [
+        "//packages/a:main",
+        "@npm//@types/aws-lambda"
+    ],
+    fat = True,
+)

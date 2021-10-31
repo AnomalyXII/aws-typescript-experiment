@@ -8,8 +8,8 @@ export class AwsLambdaExperimentStack extends cdk.Stack {
 
         const hello = new lambda.Function(this, 'HelloHandler', {
             runtime: lambda.Runtime.NODEJS_14_X,
-            code: lambda.Code.fromAsset('./node_modules/@anomaly-xii/b'),
-            handler: 'hello.handler'
+            code: lambda.Code.fromAsset('../node_modules/@anomaly-xii/b'),
+            handler: 'src/index.handler'
         });
 
         new apigw.LambdaRestApi(this, 'HelloEndpoint', {

@@ -7,9 +7,11 @@ import {APIGatewayProxyEvent, APIGatewayProxyResult} from 'aws-lambda';
 
 import HelloWorld from '@anomaly-xii/a'
 
-export const lambdaHandler = (event: APIGatewayProxyEvent): APIGatewayProxyResult => {
+export const handler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
+    const helloWorld = new HelloWorld();
+
     return {
         statusCode: 200,
-        body: new HelloWorld().get_hello()
+        body: `Greetings: ${helloWorld.get_hello()}`
     };
 }

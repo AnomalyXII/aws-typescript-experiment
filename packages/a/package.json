@@ -1,27 +1,6 @@
 {
   "name": "@anomaly-xii/a",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
-  "files": [
-    "dist/*"
-  ],
-  "devDependencies": {
-    "@types/chai": "^4.2.0",
-    "@types/jest": "^27.0.0",
-    "@types/node": "^16.11.0",
-    "chai": "^4.3.0",
-    "jest": "^27.3.0",
-    "ts-jest": "^27.0.0",
-    "typescript": "^4.4.0"
-  },
-  "scripts": {
-    "build": "yarn compile && yarn test",
-    "compile": "tsc --build tsconfig.json",
-    "compile:on-the-fly": "tsc -w",
-    "test": "jest",
-    "clean": "rm -rf dist tsconfig.tsbuildinfo"
-  },
-  "jest": {
-    "preset": "ts-jest"
-  }
+  "version": "0.0.0-WORKSPACE",
+  "main": "src/index.js",
+  "types": "src/index.d.ts"
 }

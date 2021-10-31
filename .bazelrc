@@ -1,0 +1,27 @@
+# Common Bazel settings for JavaScript/NodeJS workspaces
+# This rc file is automatically discovered when Bazel is run in this workspace,
+# see https://docs.bazel.build/versions/master/guide.html#bazelrc
+#
+# The full list of Bazel options: https://docs.bazel.build/versions/master/command-line-reference.html
+
+build --disk_cache=~/.cache/bazel-disk-cache
+build --enable_platform_specific_config
+build --symlink_prefix=dist/
+build --nolegacy_external_runfiles
+
+# Valid values are: 'summary', 'errors', 'all', 'streamed'
+test --test_output=errors
+
+test:debug --test_output=streamed --test_strategy=exclusive --test_timeout=9999 --nocache_test_results --define=VERBOSE_LOGS=1
+run:debug --define=VERBOSE_LOGS=1 -- --node_options=--inspect-brk
+build:debug --compilation_mode=dbg
+
+build:macos --experimental_inprocess_symlink_creation
+build:windows --experimental_inprocess_symlink_creation
+
+build --incompatible_strict_action_env
+run --incompatible_strict_action_env
+coverage --instrument_test_targets
+
+try-import %workspace%/.bazelrc.user
+

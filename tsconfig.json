@@ -1,12 +1,21 @@
 {
-  "files": [],
-  "include": [],
-  "references": [
-    {
-      "path": "./packages/a"
-    },
-    {
-      "path": "./packages/b"
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "commonjs",
+    "lib": [
+      "es2018"
+    ],
+    "esModuleInterop": true,
+    "declaration": true,
+    "declarationMap": true,
+    "baseUrl": "./",
+    "paths": {
+      "@anomaly-xii/a": [
+        "packages/a/src/index.ts"
+      ],
+      "@anomaly-xii/b": [
+        "packages/b/src/index.ts"
+      ]
     }
-  ]
+  }
 }

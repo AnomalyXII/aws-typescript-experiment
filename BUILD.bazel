@@ -1,0 +1,7 @@
+# Add rules here to build your software
+# See https://docs.bazel.build/versions/main/build-ref.html#BUILD_files
+
+package(default_visibility = ["//:__subpackages__"])
+
+exports_files(["jest.config.js"])
+exports_files(["tsconfig.json"])

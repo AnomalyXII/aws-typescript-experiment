@@ -1,37 +1,12 @@
 {
   "name": "@anomaly-xii/b",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist/*"
-  ],
-  "installConfig": {
-    "hoistingLimits": "workspaces",
-    "selfReferences": false
-  },
+  "version": "0.0.0-WORKSPACE",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.0",
-    "@types/chai": "^4.2.0",
-    "@types/jest": "^27.0.0",
-    "@types/node": "^16.11.0",
-    "chai": "^4.3.0",
-    "jest": "^27.3.0",
-    "ts-jest": "^27.0.0",
-    "typescript": "^4.4.0"
-  },
-  "scripts": {
-    "build": "yarn compile && yarn test",
-    "compile": "tsc --build tsconfig.json",
-    "compile:on-the-fly": "tsc -w",
-    "test": "",
-    "clean": "rm -rf dist tsconfig.tsbuildinfo"
+    "@types/aws-lambda": "~8.10.0"
   },
   "dependencies": {
-    "@anomaly-xii/a": "workspace:*",
-    "@aws-cdk/core": "1.130.0",
-    "source-map-support": "^0.5.20"
-  },
-  "jest": {
-    "preset": "ts-jest"
+    "@anomaly-xii/a": "0.0.0-WORKSPACE"
   }
 }

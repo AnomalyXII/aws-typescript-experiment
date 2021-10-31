@@ -1,8 +1,7 @@
-import {expect} from 'chai';
-import HelloWorld from "../src";
+import HelloWorld from "../src/index";
 
 
 test('says "Hello World"', () => {
     const hello = new HelloWorld();
-    expect(hello.get_hello()).to.equal('Hello World');
+    expect(hello.get_hello()).toEqual('Hello World');
 });

@@ -1,16 +1,5 @@
-# Node stuff
-.yarn/cache/
-.yarn/unplugged/
-.yarn/install-state.gz
-node_modules/
-
-# Build project and other temp files
-.idea/
-dist/
+.bazelrc.user
+dist
+bazel-out
+node_modules
 *.iml
-*.json~
-*.tsbuildinfo
-
-# CDK asset staging directory
-.cdk.staging
-cdk.out
